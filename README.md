@@ -4,6 +4,7 @@ Comecei usando o https://www.db-fiddle.com/ pois achei que funcinou melhor.
 1. Criei as tabelas
 2. Fiz a primeira consulta:
   ![screencapture-db-fiddle-2025-02-14-08_44_04](https://github.com/user-attachments/assets/4d1b08df-9b9c-4ad2-bdc9-dc973b66c2e4)
+
 3.Segunda consulta:
   ![screencapture-db-fiddle-2025-02-14-08_59_54](https://github.com/user-attachments/assets/fc618d3f-2efe-4f7b-b6f4-8660e22d29f8)
 4. Terceira consulta:
