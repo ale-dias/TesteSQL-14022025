@@ -34,7 +34,7 @@ Comecei utilizando o [DB Fiddle](https://www.db-fiddle.com/), pois achei que fun
 
 ![Quarta consulta](https://github.com/user-attachments/assets/777fdb73-e9c9-43f2-95c8-201971ab3959)
 
-## 7. Quinta consuta:
+## 7. Quinta Consulta:
 ![Quinta consulta](https://github.com/user-attachments/assets/1adbfd7f-9d79-456b-b8f0-471708d619f0)
 
 
