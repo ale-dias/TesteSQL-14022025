@@ -3,15 +3,8 @@
 Estou fazendo este documento pois não consigo fazer nenhuma movimentação na máquina da empresa além do que é permitido.  
 Comecei utilizando o [DB Fiddle](https://www.db-fiddle.com/), pois achei que funcionou melhor.
 
----
 
-## 1. Criei as Tabelas
-
-(Descrição da criação das tabelas, se necessário. Caso contrário, pode apenas listar o código).
-
----
-
-## 2. Fiz a Primeira Consulta:
+## 2. Primeira Consulta:
 
 ![Primeira consulta](https://github.com/user-attachments/assets/4d1b08df-9b9c-4ad2-bdc9-dc973b66c2e4)
 
