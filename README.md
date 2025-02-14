@@ -19,7 +19,8 @@ Comecei utilizando o [DB Fiddle](https://www.db-fiddle.com/), pois achei que fun
 
 ## 3. Segunda Consulta:
 
-![Segunda consulta](https://github.com/user-attachments/assets/b72603bd-87fe-409c-8be0-dfb9b6c5329c)
+![Segunda consulta](https://github.com/user-attachments/assets/27aab642-0773-46dc-9327-cf422be3b9c6)
+
 
 ---
 
@@ -32,7 +33,10 @@ Comecei utilizando o [DB Fiddle](https://www.db-fiddle.com/), pois achei que fun
 
 ## 5. Quarta Consulta:
 
-![Quarta consulta](https://github.com/user-attachments/assets/777fdb73-e9c9-43f2-95c8-201971ab3959)
+![Quarta consulta - Parte 1](https://github.com/user-attachments/assets/2b7ed128-53d3-4614-8166-51f2bfd0a87b)
+![Quarta consulta - Parte 2](https://github.com/user-attachments/assets/0950b782-bddf-4aad-8175-4cd4201a0343)
+
+
 
 ## 7. Quinta Consulta:
 ![Quinta consulta](https://github.com/user-attachments/assets/1adbfd7f-9d79-456b-b8f0-471708d619f0)
