@@ -6,34 +6,62 @@ Comecei utilizando o [DB Fiddle](https://www.db-fiddle.com/), pois achei que fun
 
 ## 2. Primeira Consulta:
 
-![Primeira consulta](https://github.com/user-attachments/assets/4d1b08df-9b9c-4ad2-bdc9-dc973b66c2e4)
+![Primeira consulta]
+SELECT ID_VENDEDOR AS id, NOME AS nome, SALARIO AS salario
+FROM VENDEDORES
+WHERE INATIVO = FALSE
+ORDER BY NOME ASC;
 
 ---
 
 ## 3. Segunda Consulta:
 
-![Segunda consulta](https://github.com/user-attachments/assets/27aab642-0773-46dc-9327-cf422be3b9c6)
+![Segunda consulta]
+SELECT
+ ID_VENDEDOR AS ID, NOME, SALARIO 
+FROM VENDEDORES
+WHERE SALARIO > (SELECT AVG(SALARIO) FROM VENDEDORES)
+ORDER BY SALARIO DESC;
 
 
 ---
 
 ## 4. Terceira Consulta:
 
-![Terceira consulta - Parte 1](https://github.com/user-attachments/assets/777fdb73-e9c9-43f2-95c8-201971ab3959)  
-![Terceira consulta - Parte 2](https://github.com/user-attachments/assets/babe2a8c-c56a-4624-ad9c-959672c5fa30)
-
----
+![Terceira consulta ]
+SELECT c.ID_CLIENTE AS id, c.RAZAO_SOCIAL AS razao_social,
+	COALESCE (SUM(p.VALOR_TOTAL), 0) AS total
+FROM CLIENTES c
+LEFT JOIN PEDIDO p ON c.ID_CLIENTE = p.ID_CLIENTE
+GROUP BY c.ID_CLIENTE, c.RAZAO_SOCIAL
+ORDER BY total DESC;
 
 ## 5. Quarta Consulta:
 
-![Quarta consulta - Parte 1](https://github.com/user-attachments/assets/2b7ed128-53d3-4614-8166-51f2bfd0a87b)
-![Quarta consulta - Parte 2](https://github.com/user-attachments/assets/0950b782-bddf-4aad-8175-4cd4201a0343)
-
+![Quarta consulta]
+SELECT
+	ID_PEDIDO AS ID,
+	VALOR_TOTAL AS VALOR,
+	DATA_EMISSAO AS DATA,
+	CASE
+		WHEN DATA_CANCELAMENTO IS NOT NULL THEN 'CANCELADO'
+		WHEN DATA_FATURAMENTO IS NOT NULL THEN 'FATURADO'
+	END AS SITUACAO
+FROM PEDIDO;
 
 
 ## 7. Quinta Consulta:
-![Quinta consulta](https://github.com/user-attachments/assets/1adbfd7f-9d79-456b-b8f0-471708d619f0)
-
+![Quinta consulta]
+SELECT ip.ID_PRODUTO AS id_produto,
+	SUM(ip.QUANTIDADE) AS quantidade_vendida,
+	SUM (ip.QUANTIDADE * ip.PRECO_PRATICADO) AS total vendido,
+	COUNT (DISTINCT p.ID_CLIENTE) AS clientes,
+	COUNT (DISTINCT ip.ID_PEDIDO) AS pedidos
+FROM ITENS_PEDIDO ip
+JOIN PEDIDO p ON ip.ID_PRODUTO = p.ID_PEDIDO
+GROUP BY ip.ID_PRODUTO
+ORDER BY quantidade vendida DESC, total vendido DESC
+LIMIT 1;
 
 
 
