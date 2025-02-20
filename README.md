@@ -5,36 +5,36 @@ Comecei utilizando o [DB Fiddle](https://www.db-fiddle.com/), pois achei que fun
 
 
 ## 2. Primeira Consulta:
-
+```sql
 SELECT ID_VENDEDOR AS id, NOME AS nome, SALARIO AS salario
 FROM VENDEDORES
 WHERE INATIVO = FALSE
 ORDER BY NOME ASC;
-
+```
 ---
 
 ## 3. Segunda Consulta:
-
+```sql
 SELECT
  ID_VENDEDOR AS ID, NOME, SALARIO 
 FROM VENDEDORES
 WHERE SALARIO > (SELECT AVG(SALARIO) FROM VENDEDORES)
 ORDER BY SALARIO DESC;
-
+```
 
 ---
 
 ## 4. Terceira Consulta:
-
+```sql
 SELECT c.ID_CLIENTE AS id, c.RAZAO_SOCIAL AS razao_social,
 	COALESCE (SUM(p.VALOR_TOTAL), 0) AS total
 FROM CLIENTES c
 LEFT JOIN PEDIDO p ON c.ID_CLIENTE = p.ID_CLIENTE
 GROUP BY c.ID_CLIENTE, c.RAZAO_SOCIAL
 ORDER BY total DESC;
-
+```
 ## 5. Quarta Consulta:
-
+```sql
 SELECT
 	ID_PEDIDO AS ID,
 	VALOR_TOTAL AS VALOR,
@@ -44,10 +44,10 @@ SELECT
 		WHEN DATA_FATURAMENTO IS NOT NULL THEN 'FATURADO'
 	END AS SITUACAO
 FROM PEDIDO;
-
+```
 
 ## 7. Quinta Consulta:
-
+```sql
 SELECT ip.ID_PRODUTO AS id_produto,
 	SUM(ip.QUANTIDADE) AS quantidade_vendida,
 	SUM (ip.QUANTIDADE * ip.PRECO_PRATICADO) AS total vendido,
@@ -58,6 +58,7 @@ JOIN PEDIDO p ON ip.ID_PRODUTO = p.ID_PEDIDO
 GROUP BY ip.ID_PRODUTO
 ORDER BY quantidade vendida DESC, total vendido DESC
 LIMIT 1;
+```
 
 
 
