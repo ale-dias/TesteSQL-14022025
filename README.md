@@ -6,7 +6,6 @@ Comecei utilizando o [DB Fiddle](https://www.db-fiddle.com/), pois achei que fun
 
 ## 2. Primeira Consulta:
 
-![Primeira consulta]
 SELECT ID_VENDEDOR AS id, NOME AS nome, SALARIO AS salario
 FROM VENDEDORES
 WHERE INATIVO = FALSE
@@ -16,7 +15,6 @@ ORDER BY NOME ASC;
 
 ## 3. Segunda Consulta:
 
-![Segunda consulta]
 SELECT
  ID_VENDEDOR AS ID, NOME, SALARIO 
 FROM VENDEDORES
@@ -28,7 +26,6 @@ ORDER BY SALARIO DESC;
 
 ## 4. Terceira Consulta:
 
-![Terceira consulta ]
 SELECT c.ID_CLIENTE AS id, c.RAZAO_SOCIAL AS razao_social,
 	COALESCE (SUM(p.VALOR_TOTAL), 0) AS total
 FROM CLIENTES c
@@ -38,7 +35,6 @@ ORDER BY total DESC;
 
 ## 5. Quarta Consulta:
 
-![Quarta consulta]
 SELECT
 	ID_PEDIDO AS ID,
 	VALOR_TOTAL AS VALOR,
@@ -51,7 +47,7 @@ FROM PEDIDO;
 
 
 ## 7. Quinta Consulta:
-![Quinta consulta]
+
 SELECT ip.ID_PRODUTO AS id_produto,
 	SUM(ip.QUANTIDADE) AS quantidade_vendida,
 	SUM (ip.QUANTIDADE * ip.PRECO_PRATICADO) AS total vendido,
